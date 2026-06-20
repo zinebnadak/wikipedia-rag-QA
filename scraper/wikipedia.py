@@ -1,4 +1,5 @@
 import requests
+from urllib.parse import urlsplit, unquote
 
 def get_article(title: str) -> dict | None:
     try:
@@ -33,4 +34,23 @@ def get_article(title: str) -> dict | None:
 
     return {"page_id": page_id, "title": page_title, "text": text}
 
-print(get_article("wertghj"))
+
+
+def extract_title_from_url(url: str) -> tuple[str, str] | None:
+    parts = urlsplit(url)
+    path_items = parts.path.split("/")
+
+    try:
+        wiki_index = path_items.index("wiki")
+    except ValueError:
+        return None
+
+    title = unquote(path_items[wiki_index + 1]).replace("_", " ")
+    lang = parts.netloc.split(".")[0]
+    return title, lang
+
+
+print(extract_title_from_url("https://en.wikipedia.org/wiki/Octopus"))
+
+
+
