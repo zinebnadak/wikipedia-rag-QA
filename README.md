@@ -29,3 +29,7 @@ Step-by-step instructions.
 ## References
 - [Inspo](https://medium.com/@perfectsolution808/wikipedia-based-q-a-chatbot-a-beginners-approach-using-free-tools-5067d501a6ab)
 - [Wikipedia](https://www.wikipedia.org/)
+- [groq docs](https://console.groq.com/docs/responses-api)
+- [build a request URL](https://requests.readthedocs.io/en/latest/user/quickstart/#passing-parameters-in-urls)
+- [handling url sections](https://docs.python.org/3/library/urllib.parse.html)
+- [regex (regular expression) in Python](https://www.w3schools.com/python/python_regex.asp), [findall vs. finditer](https://www.tutorialspoint.com/article/what-is-the-difference-between-re-findall-and-re-finditer-methods-available-in-python)

@@ -4,9 +4,9 @@ from groq import Groq
 
 load_dotenv()
 
-history = [{"role":"user", "content": "Say hello!"}] #user inputs the messages list later
+history = [{"role":"user", "content": "Say hello!"}] #need a history list as input later
 
-def generate_messages(messages, stream=False, temperature=0) -> list:
+def generate_messages(messages :list, stream=False, temperature=0) -> str | Iterator[str]:  #need to explicitly set stream to True
     client = Groq(api_key=os.getenv("GROQ_API_KEY"))
     response = client.chat.completions.create(
         model="llama-3.1-8b-instant",
@@ -28,6 +28,4 @@ def generate_messages(messages, stream=False, temperature=0) -> list:
     return stream_generator()
 
     
-   
-
 print(generate_messages(history))

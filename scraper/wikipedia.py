@@ -50,7 +50,7 @@ def extract_title_from_url(url: str) -> tuple[str, str] | None:
     return title, lang
 
 
-print(extract_title_from_url("https://en.wikipedia.org/wiki/Octopus"))
 
-
+# haven't actually chained these two together yet (URL in → title out → article fetched). That's a small thing 
+# — either a third function, or just two calls made wherever ingestion happens. 
 
