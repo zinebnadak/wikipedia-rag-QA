@@ -1,18 +1,24 @@
-# Madrid artice 
 
-The harder design question: question types
-A golden set that's all easy, single-fact questions ("what is Madrid's population") won't actually stress-test your pipeline. Good golden sets deliberately include a mix of difficulty levels, because each type reveals different failure modes:
 
-Simple factual — answer is one sentence, directly stated. ("What year was the Prado Museum's collection based on?")
-Section-specific — answer requires pulling from one specific section, testing whether chunking/retrieval finds the right chunk among many. ("What languages influenced Madrilenian Spanish dialect features?")
-Synthesis across chunks — answer requires combining info from two or more chunks/sections (these are the hardest, and the most realistic for a real user). ("How has Madrid's population changed from the Francoist era to today?")
-Adversarial / not-in-article — a question that sounds plausible but the article doesn't actually answer, testing whether your pipeline correctly says "I don't know" instead of hallucinating. ("What is Madrid's current mayor's stance on housing policy?" — if the article doesn't state a stance, this should NOT be answerable.)
-Boilerplate-adjacent — a question whose answer would only exist in content you deliberately filtered out (references, external links) — testing whether your filtering decision was actually correct, or cost you real answerable content.
 
-For RAGAS to measure faithfulness, answer relevance, and context precision, each entry needs:
 
-{
-    "question": "What is the population of Madrid?",
-    "ground_truth": "Madrid's population is over 3.4 million in the city proper, with a metropolitan area population of approximately 6.8 million.",
-    "source_article": "Madrid",  # which article this should be answerable from
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
