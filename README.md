@@ -33,3 +33,10 @@ Step-by-step instructions.
 - [build a request URL](https://requests.readthedocs.io/en/latest/user/quickstart/#passing-parameters-in-urls)
 - [handling url sections](https://docs.python.org/3/library/urllib.parse.html)
 - [regex (regular expression) in Python](https://www.w3schools.com/python/python_regex.asp), [findall vs. finditer](https://www.tutorialspoint.com/article/what-is-the-difference-between-re-findall-and-re-finditer-methods-available-in-python)
+
+- [RAGAS TestsetGenerator](https://docs.ragas.io/en/stable/getstarted/rag_testset_generation/#a-deeper-look)
+- [Langchain Document Object](https://reference.langchain.com/python/langchain-core/documents/base/Document)
+- LangChain's [ChatOpenAI](https://docs.langchain.com/oss/python/integrations/chat/openai) & [OpenAIEmbeddings](https://reference.langchain.com/python/langchain-openai/embeddings/base/OpenAIEmbeddings) (RAGAS speaks LangChain internally)
+- [RAGAS 0.2.x mix of question types (default_query_distribution). Consisting of all three made to a default SingleHopSpecific/MultiHopAbstract/MultiHopSpecific - QuerySynthesizer](https://docs.ragas.io/en/stable/references/generate/)
+
+- [](https://developers.llamaindex.ai/python/framework-api-reference/evaluation/dataset_generation/)

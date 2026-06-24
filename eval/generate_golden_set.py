@@ -1,32 +1,32 @@
-from scraper.wikipedia import get_article
-from langchain_core.documents import Document
+import json
 from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI, OpenAIEmbeddings
-from ragas.testset import TestsetGenerator
-from ragas.testset.evolutions import simple, reasoning, multi_context
-
-load_dotenv()
+from llama_index.core.evaluation import DatasetGenerator
+from llama_index.core import Document
+from llama_index.llms.openai import OpenAI
+from scraper.wikipedia import get_article
 
 article_loader = get_article("Madrid")
 document = Document(
     page_content=article_loader["text"],
-    meta_data={"title" : article_loader[""], "page_id" : article_loader["page_id"]})
+    metadata={"title" : article_loader["title"], "page_id" : article_loader["page_id"]})
 
-generator_llm = ChatOpenAI(model="gpt-4o-mini")
-embedding_llm = OpenAIEmbeddings(model="text-embedding-3-small")
+llm = LangchainLLMWrapper(ChatOpenAI(model="gpt-4o-mini"))
+embeddings = LangchainEmbeddingsWrapper(OpenAIEmbeddings(model="text-embedding-3-small"))
 
-generator = TestsetGenerator(
-    llm=generator_llm, 
-    critic_llm=generator_llm,
-    embedding_model=embedding_llm
-    )
+generator = TestsetGenerator.from_langchain(
+    llm=llm,
+    embedding_model=embeddings,
+)
 
 testset = generator.generate_with_langchain_docs(
     documents = [document], 
     testset_size=30,
-    distributions={simple: 0.4, reasoning: 0.3, multi_context: 0.3}
+    query_distribution=default_query_distribution
     )
 
+data_frame = testset.to_pandas()
+data_frame.to_json("eval/golden_set.json", orient="records", indent=2)
+print(f"Generated {len(data_frame)} questions")
 
 
 
