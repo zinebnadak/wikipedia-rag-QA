@@ -39,4 +39,4 @@ Step-by-step instructions.
 - LangChain's [ChatOpenAI](https://docs.langchain.com/oss/python/integrations/chat/openai) & [OpenAIEmbeddings](https://reference.langchain.com/python/langchain-openai/embeddings/base/OpenAIEmbeddings) (RAGAS speaks LangChain internally)
 - [RAGAS 0.2.x mix of question types (default_query_distribution). Consisting of all three made to a default SingleHopSpecific/MultiHopAbstract/MultiHopSpecific - QuerySynthesizer](https://docs.ragas.io/en/stable/references/generate/)
 
-- [](https://developers.llamaindex.ai/python/framework-api-reference/evaluation/dataset_generation/)
+- [llamaindex](https://developers.llamaindex.ai/python/framework-api-reference/evaluation/dataset_generation/)

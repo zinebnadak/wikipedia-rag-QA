@@ -1,24 +1,80 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[
+  "What is the estimated population of Madrid in 2025, and how does it rank in terms of size compared to other cities in the European Union?",
+  "Discuss the historical significance of Madrid's development as an administrative center after 1561. What role did it play in the context of the Hispanic Monarchy?",
+  "Identify and describe three major cultural landmarks in Madrid that are part of the UNESCO World Heritage \"Golden Triangle of Art.\"",
+  "What was the primary purpose of the fortress built by Umayyad Emir Muhammad I in the 9th century near the river Manzanares, and how did it relate to the broader political context of the time?",
+  "Describe the changes in the governance of Madrid from its confirmation as villa de realengo in 1123 to the establishment of a regimiento system in 1346. What were the key milestones in this evolution?",
+  "How did the demographic and territorial dynamics between Madrid and Segovia influence the political landscape during the mid-13th to late 14th centuries? Provide specific examples from the text.",
+  "What significant event in Madrid's history occurred during the revolt of the Comuneros, and what titles were granted to the city following its occupation by imperial troops?",
+  "Describe the demographic changes in Madrid's population from 1530 to 1598, and explain how the establishment of Philip II's court in the city influenced its growth.",
+  "What were the main causes and outcomes of the Esquilache Riots during the reign of Charles III, and how did these riots reflect the social conditions in Madrid at the time?",
+  "Discuss the economic changes that occurred in Madrid during the second half of the 19th century. What industries contributed to its modernization, and how did railway transport influence consumption patterns?",
+  "Analyze the impact of the Spanish Constitution of 1931 on Madrid's status as the capital. How did this legislation reflect the city's demographic and cultural developments during the 1930s?",
+  "Examine the role of Madrid during the Spanish Civil War. What factors contributed to its significance as a stronghold for the Republican faction, and what were the consequences of the conflict for the city?",
+  "Discuss the impact of the Francoist dictatorship on the demographic and housing landscape of Madrid during the post-war period. What were the characteristics of the housing developments introduced to accommodate the influx of rural immigrants?",
+  "Analyze the significance of the 1978 constitution for Madrid's political landscape. How did the municipal elections of 1979 change the governance of the city, and what cultural movements emerged in the following years?",
+  "Evaluate the socio-economic challenges faced by Madrid in the early 21st century. What factors contributed to the increase in income inequality and the rise of anti-austerity protests during this period?",
+  "What is the average altitude of Madrid, and how does it compare to other European capitals in terms of elevation?",
+  "Describe the geographical features that define the boundaries of Madrid, including the rivers and mountain ranges mentioned in the context.",
+  "Explain the historical growth of Madrid in relation to its urban core and the annexation of neighboring settlements. What geographical features influenced this expansion?",
+  "What percentage of Madrid's grounds are designated as green areas, and how does this compare to the World Health Organization's recommended amount of green space per inhabitant?",
+  "Describe the historical significance of El Retiro park and its transition from royal possession to municipal ownership.",
+  "Identify two major forested areas in Madrid and explain their ecological importance or historical context as mentioned in the provided information.",
+  "Describe the climate of Madrid, including its temperature ranges during winter and summer, and explain how its altitude and geographical location influence these conditions.",
+  "What historical methods were used to supply water to Madrid in the 17th century, and how did the introduction of the Canal de Isabel II in the mid-19th century change the water supply system?",
+  "Discuss the significance of precipitation patterns in Madrid, including the seasonal distribution of rainfall and the implications of being the European capital with the least amount of annual precipitation.",
+  "What factors contributed to the population decline in Madrid from 1970 until the mid-1990s, and what demographic changes occurred in the late-1990s and early 2000s?",
+  "Describe the structure and responsibilities of the City Council (Ayuntamiento de Madrid) and identify the current mayor of Madrid.",
+  "What is the significance of Madrid as the capital of Spain in terms of its political institutions, and where are the official residences of the head of state and government located?",
+  "What are the official residences of the head of state and government located in Madrid, and what are their respective functions?",
+  "Describe the administrative structure of Madrid in terms of its districts and neighbourhoods. How many districts and neighbourhoods does the city have?",
+  "Discuss the evolution of Madrid's economy from the 16th century to the present day, highlighting the key sectors that have contributed to its growth and development.",
+  "What percentage of Madrid's GDP was generated by the city itself in relation to the total GDP of the Community of Madrid in 2017, and how does this reflect the city's economic significance within the region?",
+  "Discuss the changes in the unemployment rate in Madrid from 2011 to 2018, including the peak unemployment rate and the factors that contributed to the economic recovery.",
+  "Analyze the impact of austerity measures on consumer behavior in Madrid, particularly in relation to household income, spending, and property prices since the recession that began in 2007.",
+  "What percentage of the employed workforce in Madrid was comprised of women in 2011, and how does this compare to the national average for Spain?",
+  "Identify the main sectors contributing to the services economy in Madrid and explain the significance of logistics infrastructure in the city's economic development.",
+  "Discuss the trends in the construction sector in Madrid from 2000 to 2010, including the impact of the recession on residential prices and sales.",
+  "What percentage of Madrid's economy was contributed by the construction sector in 2010, and how did this sector's earnings change from 2000 to 2009?",
+  "In 2018, which museum in Madrid had the highest number of visitors, and how many visitors did it receive?",
+  "What measures did the Madrid city council attempt to implement in April 2019 regarding tourist apartments, and what change occurred after the government transition in June 2019?",
+  "In a recent study, Madrid was ranked 7th among 36 cities as an attractive base for business. What were some of the factors that contributed to its high ranking, and what were its less favorable characteristics?",
+  "Identify the major media groups headquartered in Madrid and discuss the significance of the Madrid metropolitan area in the film and television industry, particularly in relation to Latin American media companies.",
+  "Describe the architectural influences in Madrid during the Early Habsburg period. What are some notable structures from this time, and who was a prominent architect associated with them?",
+  "Discuss the architectural contributions of Juan G\u00f3mez de Mora to Madrid in the early 17th century. Name at least three structures he is associated with and describe their significance.",
+  "How did the reign of King Charles III influence the urban development of Madrid in the 18th century? Provide examples of specific buildings or projects that were initiated during his reign.",
+  "Analyze the impact of the Spanish Civil War on architectural trends in Madrid. What changes occurred in the architectural style during the Francoist period, and how did this reflect the political climate of the time?",
+  "Discuss the architectural evolution of Madrid following the Francoist takeover after the Spanish Civil War. What were some key buildings from this period, and how did they reflect the architectural trends of the time?",
+  "Describe the significance of the Golden Triangle of Art in Madrid. Which three major museums are included in this area, and what are some notable works or collections found in each museum?",
+  "What are some of the key archaeological finds displayed at the National Archaeological Museum of Madrid? Highlight at least three significant items and their historical importance.",
+  "What are some of the significant archaeological finds displayed at the National Archaeological Museum of Madrid, and which item is considered iconic?",
+  "Describe the role and significance of the Royal Academy of Fine Arts of San Fernando in Madrid's cultural landscape.",
+  "How has the arrival of immigrants from Latin America influenced the dialect of Peninsular Spanish spoken in Madrid?",
+  "Identify two prominent writers from the Spanish Golden Century who were born in Madrid and briefly describe their contributions to Spanish literature.",
+  "What is the significance of the \"Barrio de las Letras\" in Madrid, and which notable literary figure's printing house was located there?",
+  "Describe two traditional dishes from Madrilenian cuisine and explain their main ingredients or characteristics.",
+  "Describe the significance of the Malasa\u00f1a area in Madrid's nightlife and its cultural history. What movement flourished there during the 1980s?",
+  "Identify and explain the role of the main venues for classical music in Madrid, including their resident orchestras and the types of performances they host.",
+  "What is the Day of Isidore the Laborer (San Isidro), and how is it celebrated by the people of Madrid? Include details about the traditions associated with this feast.",
+  "Discuss the significance of the Madrilenian LGBT Pride Parade in the context of Spain's history, particularly focusing on its origins in the Chueca neighborhood and its evolution since 1977.",
+  "What are some of the key events and activities that took place during the WorldPride Madrid 2017 celebration, and how did it aim to represent Madrid as a multicultural and tolerant community?",
+  "Describe the role of Las Ventas in Madrid's bullfighting culture, including its historical significance, seating capacity, and the controversy surrounding bullfighting in the city.",
+  "Describe the significance of Las Ventas in Madrid's bullfighting culture, including its history, capacity, and the timing of the bullfighting season.",
+  "Compare and contrast the football clubs Real Madrid and Atl\u00e9tico Madrid in terms of their founding years, fan demographics, and major achievements.",
+  "What role does the Palacio de Deportes (WiZink Center) play in Madrid's basketball scene, and what notable events has it hosted?",
+  "What is the significance of the Vuelta a Espa\u00f1a in the context of international cycling events, and when does its final stage take place in Madrid?",
+  "Describe the history and evolution of the Complutense University of Madrid, including its founding, relocation to Madrid, and the impact of the Spanish Civil War on its development.",
+  "In what year did Formula One announce that Madrid would host the Spanish Grand Prix, and where will the event take place?",
+  "What significant change occurred to the Alcal\u00e1 campus in 1977, and how does it relate to the University of Alcal\u00e1's status as an independent institution?",
+  "Identify two key strengths of the Autonomous University of Madrid (UAM) and describe its main campus location.",
+  "Discuss the impact of the 2018 vehicle ban on non-residents in Madrid's downtown areas and how it reflects the city's approach to urban transport and public space.",
+  "What measures did Madrid implement in 2018 to address pollution in the downtown areas, and what was the impact of these measures on vehicle access?",
+  "Describe the radial road system in Madrid and name at least three major autov\u00edas that connect the city to other regions in Spain.",
+  "Explain the structure and purpose of the orbital road network in Madrid, including the significance of the M-30 and its operational management.",
+  "Describe the structure and operational coordination of public transport in Madrid, including the role of the Consorcio Regional de Transportes de Madrid (CRTM).",
+  "Compare and contrast the Metro and Cercan\u00edas systems in Madrid in terms of their coverage, speed, and frequency of service.",
+  "What are the key features of Madrid's long-distance transport system, and how does it connect the city to other major destinations in Spain and beyond?",
+  "What is the significance of Madrid-Barajas Airport in terms of passenger traffic and its role as a logistics base in Europe?",
+  "Identify two international organizations headquartered in Madrid and describe their primary focus or purpose.",
+  "List two cities with which Madrid has established sister city agreements and the year these agreements were made."
+]
