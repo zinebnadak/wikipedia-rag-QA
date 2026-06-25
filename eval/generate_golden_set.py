@@ -14,7 +14,6 @@ try:
         metadata={"title" : article_loader["title"], "page_id" : article_loader["page_id"]})
 
     llm = OpenAI(model="gpt-4o-mini")
-    #embeddings = LangchainEmbeddingsWrapper(OpenAIEmbeddings(model="text-embedding-3-small"))
 
     generator = DatasetGenerator.from_documents(
         documents=[document],
@@ -27,12 +26,21 @@ try:
 
     
     try:
-        questions = list(dataset.queries.values())
+        pairs = [
+        {
+            "question": question,
+            "ground_truth": dataset.responses[qid], #qid= query ID 
+            "source_article": "Madrid"
+        }
+        for qid, question in dataset.queries.items()
+        if qid in dataset.responses
+    ]
+        
         with open("eval/golden_set.json", "w") as file :
-            json.dump(questions, file , indent=2)
-            print(f"Generated {len(questions)} questions")
+            json.dump(pairs, file , indent=2)
+            print(f"Generated {len(pairs)} Q&A pairs")
     except Exception as e: 
-        print(f"Generating questions error: {e}")
+        print(f"Generating pairs error: {e}")
     
     
 except Exception as e: 
