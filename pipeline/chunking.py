@@ -68,8 +68,8 @@ def chunk_article_data(article_data: dict) -> list[dict]:
         elif number_of_equal_signs == 4:    # merge to the heading of 3
             chunks[-1]["text"] = chunks[-1]["text"] + f" \n\n{heading_name}:" + content.strip()
 
-    return chunks[0]
+    return chunks
         
 
-print(chunk_article_data(get_article("Madrid")))
+
 
