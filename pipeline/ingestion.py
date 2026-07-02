@@ -39,7 +39,8 @@ def ingest_article(url: str) -> dict:
     except Exception as e:
         return {"status":"error", "message": f"Failed to update/insert documents to ChromaDB: {str(e)}"}
 
-print(ingest_article("https://en.wikipedia.org/wiki/Computer_science"))
-print(collection.count()) #verify the data created in ChromaD
+
+# results = collection.get(where={"article_title": "Madrid"})
+# print(len(results["ids"]))
 
 
