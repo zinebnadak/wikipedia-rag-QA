@@ -20,7 +20,7 @@ def normalize(value):
 if __name__ == "__main__":  # golden_set: list[dict], chunks: list[dict]) -> list[dict]:
     chunks = chunk_article_data(get_article("Madrid"))
 
-    with open("eval/golden_set.json", "r") as file:
+    with open("eval/golden_set_2.json", "r") as file:
         golden_set = json.load(file)
 
 
@@ -57,7 +57,7 @@ if __name__ == "__main__":  # golden_set: list[dict], chunks: list[dict]) -> lis
                 )
             entry["ground_truth"] = response.output_text
     
-    with open("eval/golden_set.json", "w") as file:
+    with open("eval/golden_set_2.json", "w") as file:
         json.dump(golden_set, file, indent=2)
 
     print(f"\nTotal matched: {matched} / {matched + no_match}\nDone. {matched} ground truths written to golden set")

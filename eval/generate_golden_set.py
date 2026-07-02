@@ -55,7 +55,7 @@ try:
 
     all_pairs = all_pairs[:30]
 
-    with open("eval/golden_set.json", "w") as f:
+    with open("eval/golden_set_2.json", "w") as f:
         json.dump(all_pairs, f, indent=2)
     print(f"Generated {len(all_pairs)} pairs")
 
