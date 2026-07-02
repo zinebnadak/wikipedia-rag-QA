@@ -3,180 +3,210 @@
     "question": "What is the significance of Madrid's status as the capital of Spain in terms of its political, economic, and cultural roles within the country?",
     "source_article": "Madrid",
     "source_section": "Intro",
-    "source_subsection": ""
+    "source_subsection": "",
+    "ground_truth": "Madrid is the political, economic, and cultural centre of Spain. It serves as the permanent seat of the court of the Hispanic Monarchy and hosts major Spanish companies, concentrating the bulk of banking operations in the country. Additionally, it is a centre for Spanish linguistic prescriptivism and organizes significant cultural events and fairs."
   },
   {
     "question": "What are the different theories regarding the origin of the name \"Madrid,\" and what challenges do they face in explaining its phonetic evolution?",
     "source_article": "Madrid",
     "source_section": "Etymology",
-    "source_subsection": ""
+    "source_subsection": "",
+    "ground_truth": "The different theories regarding the origin of the name \"Madrid\" include:\n\n1. A Celtic origin (Madrid < *Magetoritum; with the root \"-ritu\" meaning \"ford\").\n2. From the Arabic ma\u01e7r\u00e0 / majr\u0101 (meaning \"water stream\") or Arabic: \u200f\u0645\u062c\u0631\u064a\u0637\u200e, romanized: majr\u012b\u1e6d, lit.\u2009'\"spring\", \"fountain\"'.\n3. A Mozarabic variant of the Latin matrix, matricis (also meaning \"water stream\").\n\nThese theories all face problems when it comes to fully explaining the phonetic evolution of the toponym."
   },
   {
     "question": "What archaeological remains can be found in modern-day Madrid that indicate its occupation since prehistoric times?",
     "source_article": "Madrid",
     "source_section": "History",
-    "source_subsection": ""
+    "source_subsection": "",
+    "ground_truth": "Archaeological remains of the Celtic Carpetani settlement, Roman villas, a Visigoth basilica near the church of Santa Mar\u00eda de la Almudena, and three Visigoth necropolises near Casa de Campo, Tetu\u00e1n, and Vic\u00e1lvaro."
   },
   {
     "question": "What was the primary purpose of the fortress built by Umayyad Emir Muhammad I in the 9th century near the river Manzanares?",
     "source_article": "Madrid",
     "source_section": "History",
-    "source_subsection": "Middle Ages"
+    "source_subsection": "Middle Ages",
+    "ground_truth": "The primary purpose of the fortress built by Umayyad Emir Muhammad I in the 9th century near the river Manzanares was to protect Toledo from Christian attacks from the North and as a starting point for Muslim offensives."
   },
   {
     "question": "Discuss the impact of Philip II's decision to establish his court in Madrid in 1561 on the city's population and its status as the capital of Spain. How did this influence the city's development during his reign?",
     "source_article": "Madrid",
     "source_section": "History",
-    "source_subsection": "Early Modern Era"
+    "source_subsection": "Early Modern Era",
+    "ground_truth": "Philip II's decision to establish his court in Madrid in 1561 significantly impacted the city's population and its status as the capital of Spain. The population grew from about 18,000 in 1561 to 80,000 in 1598, indicating a boom during his reign. Being the capital was decisive for the evolution of the city and influenced its fate, as it became the political center of the monarchy."
   },
   {
     "question": "What significant event occurred on 24 May 1823 in Madrid, and what was its impact on the political landscape of the city?",
     "source_article": "Madrid",
     "source_section": "History",
-    "source_subsection": "Capital of the Liberal State"
+    "source_subsection": "Capital of the Liberal State",
+    "ground_truth": "On 24 May 1823, Madrid was invaded by a French army called the Hundred Thousand Sons of Saint Louis, which intervened to restore the absolutism of Ferdinand that he had been deprived of during the 1820\u20131823 trienio liberal."
   },
   {
     "question": "What significant legislative change regarding the capital of Spain occurred with the Spanish Constitution of 1931, and how did this impact Madrid's demographic and cultural landscape during the 1930s?",
     "source_article": "Madrid",
     "source_section": "History",
-    "source_subsection": "Second Republic and Civil War"
+    "source_subsection": "Second Republic and Civil War",
+    "ground_truth": "The Spanish Constitution of 1931 explicitly legislated the location of the country's capital in Madrid. This led to Madrid experiencing demographic growth, becoming urbanized, and becoming the center of new political movements during the 1930s. The city's cultural life notably grew during the Silver Age of Spanish Culture, with increased newspaper sales and a decline in illiteracy rates to below 20%."
   },
   {
     "question": "What were the main factors contributing to the demographic growth of Madrid during the Francoist dictatorship, and how did this growth impact housing conditions in the city?",
     "source_article": "Madrid",
     "source_section": "History",
-    "source_subsection": "Francoist dictatorship"
+    "source_subsection": "Francoist dictatorship",
+    "ground_truth": "The main factors contributing to the demographic growth of Madrid during the Francoist dictatorship were mass immigration from rural areas of Spain and the annexation of neighbouring municipalities. This growth impacted housing conditions by leading to the construction of abundant housing in the peripheral areas, initially comprising substandard housing, and resulted in increased wealth polarisation, with many shacks scattered around the city."
   },
   {
     "question": "Discuss the impact of the 1978 constitution on Madrid's political landscape and identify the first democratically elected mayor of the city after the fall of the Francoist regime.",
     "source_article": "Madrid",
     "source_section": "History",
-    "source_subsection": "Recent history"
+    "source_subsection": "Recent history",
+    "ground_truth": "The 1978 constitution confirmed Madrid as the capital of Spain, significantly impacting its political landscape by enabling the election of the first democratically elected mayor since the Second Republic. The first mayor was Enrique Tierno Galv\u00e1n, who belonged to the centre-left PSOE."
   },
   {
     "question": "What is the average altitude of Madrid, and how does it compare to other European capitals in terms of elevation?",
     "source_article": "Madrid",
     "source_section": "Geography",
-    "source_subsection": ""
+    "source_subsection": "",
+    "ground_truth": "The average altitude of Madrid is 650 metres (2,130 ft), making it the second-highest capital of Europe, after Andorra la Vella."
   },
   {
     "question": "What percentage of Madrid's grounds are designated as green areas, and how does this compare to the World Health Organization's recommended amount of green space per inhabitant?",
     "source_article": "Madrid",
     "source_section": "Geography",
-    "source_subsection": "Parks and forests"
+    "source_subsection": "Parks and forests",
+    "ground_truth": "8.2% of Madrid's grounds are designated as green areas, which provides 16 square metres of green area per inhabitant, far exceeding the ten-square-metre recommended by the World Health Organization."
   },
   {
     "question": "Describe the climate of Madrid, including its classification and the main characteristics of its seasonal weather patterns.",
     "source_article": "Madrid",
     "source_section": "Geography",
-    "source_subsection": "Climate"
+    "source_subsection": "Climate",
+    "ground_truth": "Madrid has a cold semi-arid climate (K\u00f6ppen BSk), transitioning to a Mediterranean climate (Csa) in the western half. Its climate has continental influences, with cool winters due to its altitude of approximately 667 m (2,188 ft) and distance from the sea. Winters are mostly sunny but can experience rain, sporadic snowfalls, and frequent frosts, particularly at night and in the mornings. Summers are hot and sunny, with average daytime temperatures in July ranging from 32 to 34 \u00b0C (90 to 93 \u00b0F), often exceeding 35 \u00b0C (95 \u00b0F) and occasionally reaching up to 40 \u00b0C during heat waves. Precipitation is concentrated in autumn, winter, and spring, while summer sees sparse rainfall, typically in the form of a few showers or thunderstorms. Madrid is the European capital with the least amount of annual precipitation."
   },
   {
     "question": "What were the viajes de agua, and how did they contribute to the water supply of Madrid in the 17th century?",
     "source_article": "Madrid",
     "source_section": "Geography",
-    "source_subsection": "Water supply"
+    "source_subsection": "Water supply",
+    "ground_truth": "The viajes de agua were a kind of water channel or qanat used in the 17th century to provide water to the city of Madrid. They were the main infrastructure for the supply of water until the arrival of the Canal de Isabel II in the mid-19th century."
   },
   {
     "question": "What factors contributed to the population decline in Madrid from 1970 until the mid-1990s, and how did this trend change in the late-1990s and early 2000s?",
     "source_article": "Madrid",
     "source_section": "Demographics",
-    "source_subsection": ""
+    "source_subsection": "",
+    "ground_truth": "The population decline in Madrid from 1970 until the mid-1990s was caused in part by the growth of satellite suburbs at the expense of the downtown region within the city proper. This trend changed in the late-1990s and early 2000s due to immigration and a surge in Spanish economic growth, leading to a demographic boom."
   },
   {
     "question": "What are the main responsibilities of the Plenary (Pleno) of the Ayuntamiento de Madrid?",
     "source_article": "Madrid",
     "source_section": "Government",
-    "source_subsection": "Local government and administration"
+    "source_subsection": "Local government and administration",
+    "ground_truth": "The main responsibilities of the Plenary (Pleno) of the Ayuntamiento de Madrid include fiscal matters, the election and deposition of the mayor, the approval and modification of decrees and regulations, the approval of budgets, agreements related to the limits and alteration of the municipal term, services management, and participation in supramunicipal organisations."
   },
   {
     "question": "What are the names of the official residences of the King of Spain and the President of the Government, and where are they located in relation to each other in Madrid?",
     "source_article": "Madrid",
     "source_section": "Government",
-    "source_subsection": "Capital of Spain"
+    "source_subsection": "Capital of Spain",
+    "ground_truth": "The official residence of the King of Spain is the Zarzuela Palace, and the official residence of the President of the Government is the Moncloa Palace. Both residences are located in the northwest of Madrid."
   },
   {
     "question": "What is the role of the Assembly of Madrid within the Community of Madrid?",
     "source_article": "Madrid",
     "source_section": "Government",
-    "source_subsection": "Regional capital"
+    "source_subsection": "Regional capital",
+    "ground_truth": "The Assembly of Madrid serves as the seat of the regional parliament within the Community of Madrid."
   },
   {
     "question": "What is the name of the local law enforcement body in Madrid, and how many civil servants were part of its workforce in 2018?",
     "source_article": "Madrid",
     "source_section": "Government",
-    "source_subsection": "Law enforcement"
+    "source_subsection": "Law enforcement",
+    "ground_truth": "The local law enforcement body in Madrid is the Madrid Municipal Police (Polic\u00eda Municipal de Madrid), and it had a workforce of 6,190 civil servants in 2018."
   },
   {
     "question": "Discuss the evolution of Madrid's economy from the 16th century to the 20th century, highlighting the shift from a center of consumption to its current status as a major European financial center.",
     "source_article": "Madrid",
     "source_section": "Economy",
-    "source_subsection": ""
+    "source_subsection": "",
+    "ground_truth": "In the 16th century, after becoming the capital of Spain, Madrid was primarily a center of consumption, focusing on supplying its growing population and supporting trades like banking and publishing. A large industrial sector did not develop until the 20th century, after which industry expanded and diversified, making Madrid the second industrial city in Spain. Currently, the economy is increasingly dominated by the service sector, with Madrid recognized as a major European financial center, featuring the third largest stock market in Europe and ranking as the 5th most important center of commerce in Europe."
   },
   {
     "question": "Discuss the evolution of the Bank of Spain, including its original name, the year it was founded, and the significance of its location in Madrid's economic history.",
     "source_article": "Madrid",
     "source_section": "Economy",
-    "source_subsection": "Economic history"
+    "source_subsection": "Economic history",
+    "ground_truth": "The Bank of Spain was originally named the Bank of San Carlos when it was founded in 1782. It was later renamed the Bank of San Fernando in 1829 and ultimately became the Bank of Spain in 1856. Its headquarters are located at the calle de Alcal\u00e1, which is significant as Madrid's economy evolved, particularly with the growth of manufacturing industries in the 20th century."
   },
   {
     "question": "What percentage of Madrid's GDP was generated by the city itself in relation to the Community of Madrid's total GDP in 2017?",
     "source_article": "Madrid",
     "source_section": "Economy",
-    "source_subsection": "Present-day economy"
+    "source_subsection": "Present-day economy",
+    "ground_truth": "The city generates 65.9% of the Community of Madrid's GDP."
   },
   {
     "question": "What percentage of banking activity in Spain is carried out by banks based in Madrid, and what role does the Bank of Spain play in the city's financial landscape?",
     "source_article": "Madrid",
     "source_section": "Economy",
-    "source_subsection": "Present-day economy"
+    "source_subsection": "Present-day economy",
+    "ground_truth": "Banks based in Madrid carry out 72% of the banking activity in Spain. The Bank of Spain has existed in Madrid since 1782."
   },
   {
     "question": "What measures were proposed by the ayuntamiento in April 2019 to regulate tourist apartments in Madrid, and what changes occurred after the government transition in June 2019?",
     "source_article": "Madrid",
     "source_section": "Economy",
-    "source_subsection": "Present-day economy"
+    "source_subsection": "Present-day economy",
+    "ground_truth": "In April 2019, the ayuntamiento passed a plan intending to regulate tourist apartments, seeking to greatly limit the number of such apartments and enforce a requirement for independent access to those apartments on and off the street. After the change of government in June 2019, the new municipal administration planned to revert the regulation."
   },
   {
     "question": "What role does the Madrid metropolitan area play in the film and television industry, particularly in relation to Latin American and European media companies?",
     "source_article": "Madrid",
     "source_section": "Economy",
-    "source_subsection": "Media and entertainment"
+    "source_subsection": "Media and entertainment",
+    "ground_truth": "The Madrid metropolitan area is an important film and television production hub, serving as the entry point into the European media market for Latin American media companies and into the Latin American markets for European companies."
   },
   {
     "question": "Discuss the influence of the Habsburgs on Madrid's architecture during the Early Habsburg period, highlighting specific architectural features and examples from that era.",
     "source_article": "Madrid",
     "source_section": "Culture",
-    "source_subsection": "Architecture"
+    "source_subsection": "Architecture",
+    "ground_truth": "During the Early Habsburg period, the architecture of Madrid was influenced by European styles, particularly under the monicker of Austrian style, which incorporated Austrian, Italian, Dutch, and Spanish influences. A notable feature of this period was the use of pointy slate spires, which were imported from Central Europe and became a staple in Madrilenian architecture. Key examples from this era include several buildings attributed to Juan G\u00f3mez de Mora, such as the Palace of the Duke of Uceda (1610), the Monastery of La Encarnaci\u00f3n (1611\u20131616), the Plaza Mayor (1617\u20131619), and the C\u00e1rcel de Corte (1629\u20131641), known as the Santa Cruz Palace. Additionally, Pedro de Ribera introduced Churrigueresque architecture to Madrid, with notable examples including the Cuartel del Conde-Duque, the church of Montserrat, and the Bridge of Toledo."
   },
   {
     "question": "Discuss the architectural styles that influenced the construction of the Gran V\u00eda in Madrid and provide examples of buildings that represent these styles.",
     "source_article": "Madrid",
     "source_section": "Culture",
-    "source_subsection": "Architecture"
+    "source_subsection": "Architecture",
+    "ground_truth": "The Gran Vía in Madrid was built using different styles that evolved over time, including French style, eclectic, art deco, and expressionist. The article does not name specific buildings on the Gran Vía as examples of these styles."
   },
   {
     "question": "What are the three major museums that comprise the Golden Triangle of Art in Madrid, and what is the primary focus of each museum's collection?",
     "source_article": "Madrid",
     "source_section": "Culture",
-    "source_subsection": "Museums and cultural centres"
+    "source_subsection": "Museums and cultural centres",
+    "ground_truth": "The three major museums that comprise the Golden Triangle of Art in Madrid are:\n\n1. **Prado Museum**: Features one of the world's finest collections of European art from the 12th century to the early 19th century, based on the former Spanish Royal Collection.\n\n2. **Reina Sof\u00eda Museum**: Focuses on 20th-century art, mainly dedicated to Spanish art, and houses works by Pablo Picasso and other 20th-century masters.\n\n3. **Thyssen-Bornemisza Museum**: Fills historical gaps in the collections of the other two museums, including Italian primitives, Impressionists, Expressionists, and European and American paintings from the second half of the 20th century."
   },
   {
     "question": "What is the significance of the Museum of the Americas, and what types of collections does it house?",
     "source_article": "Madrid",
     "source_section": "Culture",
-    "source_subsection": "Museums and cultural centres"
+    "source_subsection": "Museums and cultural centres",
+    "ground_truth": "The Museum of the Americas is a national museum that holds artistic, archaeological, and ethnographic collections from the Americas, ranging from the Paleolithic period to the present day."
   },
   {
     "question": "What are some typical features of Peninsular Spanish as spoken in Madrid, and how do they reflect the city's position between northern and southern dialects?",
     "source_article": "Madrid",
     "source_section": "Culture",
-    "source_subsection": "Language"
+    "source_subsection": "Language",
+    "ground_truth": "Some typical features of Peninsular Spanish as spoken in Madrid include:\n\n- Ye\u00edsmo, where \"call\u00f3\" and \"cay\u00f3\" sound alike among all social classes.\n- Aspiration of coda /s/.\n- Frequent elision of final /d/ and devoicing /\u03b8/ coexisting with standard preservation.\n- Le\u00edsmo, la\u00edsmo, and lo\u00edsmo, with pronoun \"le\" specialized for masculine and \"la\" for feminine direct and indirect objects.\n- Influence from a substantial number of immigrants from Latin America, leading to dialectal convergence and divergence.\n- Creation of slang, Cheli, by Madrid youth in the 1970s and 1980s.\n\nThese features reflect Madrid's transitional position between northern and southern dialects."
   },
   {
     "question": "Discuss the significance of the \"Barrio de las Letras\" in the context of Spanish literature during the 16th and 17th centuries, mentioning at least three prominent writers associated with this neighborhood.",
     "source_article": "Madrid",
     "source_section": "Culture",
-    "source_subsection": "Literature"
+    "source_subsection": "Literature",
+    "ground_truth": "The \"Barrio de las Letras\" is significant in the context of Spanish literature during the 16th and 17th centuries due to its association with intense literary activity and the presence of prominent writers of the Spanish Golden Age. Notable writers linked to this neighborhood include Lope de Vega, Francisco de Quevedo, and Luis de G\u00f3ngora. The area also housed important theatres, such as the Cruz and Pr\u00edncipe Theatres, contributing to its literary prominence."
   }
 ]

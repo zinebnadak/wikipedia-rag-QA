@@ -11,7 +11,7 @@
     "source_article": "Madrid",
     "source_section": "Intro",
     "source_subsection": "",
-    "ground_truth": "Three major landmarks in Madrid that contribute to its status as a leading destination for international tourism are:\n\n1. **Plaza Mayor** - A significant public square in the heart of Madrid.\n2. **Royal Palace of Madrid** - The official residence of the Spanish royal family.\n3. **Golden Triangle of Art** - A UNESCO World Heritage site located along the Paseo del Prado, comprising three art museums: the Prado Museum, the Reina Sof\u00eda Museum, and the Thyssen-Bornemisza Museum."
+    "ground_truth": "Three major landmarks in Madrid that contribute to its status as a leading destination for international tourism are:\n\n1. **Plaza Mayor**\n2. **Royal Palace of Madrid** - The official residence of the Spanish royal family.\n3. **Golden Triangle of Art** - A UNESCO World Heritage site located along the Paseo del Prado, comprising three art museums: the Prado Museum, the Reina Sof\u00eda Museum, and the Thyssen-Bornemisza Museum."
   },
   {
     "question": "What are the nicknames for Madrid mentioned in the text, and what do they translate to in English?",
@@ -25,14 +25,14 @@
     "source_article": "Madrid",
     "source_section": "History",
     "source_subsection": "",
-    "ground_truth": "The different types of archaeological remains found in Madrid that indicate its historical significance during the Roman and Visigoth periods are Roman villas, a Visigoth basilica, and three Visigoth necropolises."
+    "ground_truth": "The different types of archaeological remains found in Madrid that indicate its historical significance during the Roman and Visigoth periods are Roman villas, a Visigoth basilica, and three Visigoth necropolises near Casa de Campo, Tetuán and Vicálvaro.."
   },
   {
     "question": "Describe the changes in the demographic distribution of Madrid following its conquest by Alfonso VI in 1083. How did the status of Muslims and Jews change in relation to the Christian population?",
     "source_article": "Madrid",
     "source_section": "History",
     "source_subsection": "Middle Ages",
-    "ground_truth": "Following its conquest by Alfonso VI in 1083, Christians occupied the center of Madrid, while Muslims and Jews were displaced to the suburbs."
+    "ground_truth": "Following its conquest by Alfonso VI in 1083, Christians occupied the center of Madrid, while Muslims and Jews were displaced to the suburbs. "
   },
   {
     "question": "What significant event led to Madrid being besieged and occupied by imperial troops during the revolt of the Comuneros, and what titles were granted to the city as a result?",
@@ -67,7 +67,7 @@
     "source_article": "Madrid",
     "source_section": "Geography",
     "source_subsection": "Parks and forests",
-    "ground_truth": "Two large forested areas in Madrid are the Monte de El Pardo and the Soto de Vi\u00f1uelas. The Monte de El Pardo is considered the best preserved Mediterranean forest in the Community of Madrid and is designated as a Special Protection Area for bird-life. The Soto de Vi\u00f1uelas is also mentioned as one of the large forested areas, but its specific environmental importance or designations are not detailed in the excerpt."
+    "ground_truth": "Two large forested areas in Madrid are the Monte de El Pardo and the Soto de Vi\u00f1uelas. The Monte de El Pardo is considered the best preserved Mediterranean forest in the Community of Madrid and one of the best preserved in Europe. It is designated as a Special Protection Area for bird-life and is part of the Regional Park of the High Basin of the Manzanares. The excerpt does not provide specific environmental importance or designations for the Soto de Vi\u00f1uelas."
   },
   {
     "question": "What are the recorded extremes of temperature in Madrid, including both the highest and lowest temperatures? Provide the dates and specific temperatures for these records.",
@@ -81,7 +81,7 @@
     "source_article": "Madrid",
     "source_section": "Geography",
     "source_subsection": "Water supply",
-    "ground_truth": "The two specific viajes de agua mentioned in the text are the Viaje de Amaniel (1610\u20131621) and the Viaje de Fuente Castellana (1613\u20131620)."
+    "ground_truth": "Two specific viajes de agua mentioned in the text are the Viaje de Amaniel (1610\u20131621) and the Viaje de Fuente Castellana (1613\u20131620)."
   },
   {
     "question": "Who is the current mayor of Madrid, and which political party does he represent?",
@@ -119,13 +119,6 @@
     "ground_truth": "Key figures in madrilenian architecture from the 19th and 20th centuries include Narciso Pascual y Colomer, Francisco Jare\u00f1o y Alarc\u00f3n, Francisco de Cubas, Juan Bautista L\u00e1zaro de Diego, Ricardo Vel\u00e1zquez Bosco, Antonio Palacios, Secundino Zuazo, Luis Guti\u00e9rrez Soto, Luis Moya Blanco, and Alejandro de la Sota. Their contributions involved modernizing the city and building new neighborhoods and monuments.\n\nMajor urban planning initiatives during this time included the expansion of Madrid under the Plan Castro, resulting in the neighborhoods of Salamanca, Arg\u00fcelles, and Chamber\u00ed. Additionally, Arturo Soria conceived the linear city and built the first few kilometers of the road that bears his name. The Gran V\u00eda was also constructed, showcasing various architectural styles that evolved over time."
   },
   {
-    "question": "What are the three major museums that comprise the Golden Triangle of Art in Madrid, and what is the primary focus of each museum's collection?",
-    "source_article": "Madrid",
-    "source_section": "Culture",
-    "source_subsection": "Museums and cultural centres",
-    "ground_truth": "The three major museums that comprise the Golden Triangle of Art in Madrid are:\n\n1. **Prado Museum**: Features one of the world's finest collections of European art from the 12th century to the early 19th century, based on the former Spanish Royal Collection.\n\n2. **Reina Sof\u00eda Museum**: Focuses on 20th-century art, mainly dedicated to Spanish art, and houses Pablo Picasso's Guernica.\n\n3. **Thyssen-Bornemisza Museum**: Fills historical gaps in the collections of the other two museums, including Italian primitives, Impressionists, Expressionists, and European and American paintings from the second half of the 20th century."
-  },
-  {
     "question": "Explain the phenomenon of le\u00edsmo, la\u00edsmo, and lo\u00edsmo in Madrid speech, and how do these pronouns function differently in the context of direct and indirect objects?",
     "source_article": "Madrid",
     "source_section": "Culture",
@@ -137,7 +130,7 @@
     "source_article": "Madrid",
     "source_section": "Culture",
     "source_subsection": "Cuisine",
-    "ground_truth": "Two traditional winter specialties mentioned in the text are:\n\n1. **Callos a la madrile\u00f1a** - usually made of cattle tripes.\n2. **Cocido madrile\u00f1o** - a chickpea-based stew."
+    "ground_truth": "Two traditional winter specialties mentioned in the text are:\n\n1. **Cocido madrile\u00f1o** - a chickpea-based stew, described as one of the most emblematic dishes of Madrilenian cuisine.\n2. **Callos a la madrile\u00f1a** - a traditional winter specialty, usually made of cattle tripes"
   },
   {
     "question": "What are some of the key areas in Madrid known for their vibrant nightlife, and what types of venues can be found in these locations?",
@@ -179,28 +172,28 @@
     "source_article": "Madrid",
     "source_section": "Transport",
     "source_subsection": "",
-    "ground_truth": "In 2018, Madrid banned all non-resident vehicles from its downtown areas. The implications of this policy for urban mobility are not stated in the excerpt."
+    "ground_truth": "In 2018, Madrid banned all non-resident vehicles from its downtown areas. The excerpt does not discuss the implications of this policy for urban mobility."
   },
   {
     "question": "Describe the different types of bus services available in Madrid, including the specific features of the Airport Express Shuttle and the role of the Empresa Municipal de Transportes (EMT Madrid).",
     "source_article": "Madrid",
     "source_section": "Transport",
     "source_subsection": "Public transport",
-    "ground_truth": "In Madrid, there is a dense network of bus routes run by the Empresa Municipal de Transportes (EMT Madrid), which operates 24 hours a day. Special services called \"N lines\" are provided during nighttime. The Airport Express Shuttle line, which connects the airport with the city centre, features distinctively yellow buses. Additionally, green buses (interurbanos) connect the city with the suburbs and are often run by private operators, while still being regulated by the CRTM."
+    "ground_truth": "In Madrid, there is a dense network of bus routes operated by the Empresa Municipal de Transportes (EMT Madrid), which runs 24 hours a day. Special services called \"N lines\" are provided during nighttime. The Airport Express Shuttle line, which connects the airport with the city centre, features distinctively yellow buses. Additionally, green buses (interurbanos) connect the city with the suburbs and are regulated by the CRTM, often run by private operators."
   },
   {
     "question": "What advancements are being made in the design of high-speed trains in Spain, and how do they compare to the current Talgo AVRIL?",
     "source_article": "Madrid",
     "source_section": "Transport",
     "source_subsection": "Long-distance transport",
-    "ground_truth": "Spanish companies are designing new high-speed trains which will be the new-generation AVE, much like the current Talgo AVRIL."
+    "ground_truth": "Spanish companies are designing new high-speed trains that will be the new-generation AVE, much like the current Talgo AVRIL."
   },
   {
     "question": "What are the primary functions of Cuatro Vientos Airport and Torrej\u00f3n Air Base, and how do they differ from Madrid-Barajas Airport?",
     "source_article": "Madrid",
     "source_section": "Transport",
     "source_subsection": "Airport",
-    "ground_truth": "Cuatro Vientos Airport has a dual military-civilian use and hosts several aviation schools. Torrej\u00f3n Air Base also has a secondary civilian use aside from its military purpose. In contrast, Madrid-Barajas Airport primarily handles passenger traffic and air freight movements, serving as a major European hub."
+    "ground_truth": "Cuatro Vientos Airport has a dual military-civilian use and hosts several aviation schools. Torrej\u00f3n Air Base also has a secondary civilian use aside from its military purpose. Madrid-Barajas Airport, by contrast, is a major civilian hub handling over 60 million passengers annually."
   },
   {
     "question": "How many foreign embassies are located in Madrid, and what significance do they hold in relation to the rest of Spain?",
@@ -214,6 +207,6 @@
     "source_article": "Madrid",
     "source_section": "International relations",
     "source_subsection": "Partnerships with international organisations",
-    "ground_truth": "Madrid partners with the following international organisations: C40 Cities, International Labour Organization (OIT), Ibero-American General Secretariat (SEGIB), United Nations Educational, Scientific and Cultural Organization (UNESCO), and United Nations Human Settlements Programme (ONU-HABITAT)."
+    "ground_truth": "Madrid partners with the following international organisations: C40 Cities, International Labour Organization (OIT), Ibero-American General Secretariat (SEGIB), United Nations Educational, Scientific and Cultural Organization (UNESCO), and United Nations Human Settlements Programme (ONU-HABITAT). The excerpt does not describe what these organisations do."
   }
 ]
