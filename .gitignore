@@ -4,3 +4,5 @@ test.py
 /data
 .venv
 chroma_db/
+check_eval.py
+.py

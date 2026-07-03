@@ -20,11 +20,25 @@ An AI-powered tool that lets you explore and study Wikipedia articles through a 
 - [The detail worth remembering]
 
 ## How to Run
-Step-by-step instructions. 
+´´´
+uv init 
+source .venv/bin/activate
+uv sync 
+uv run -m pipeline.ingestion
+´´´
+
 
 ## Tech Used
 - Lightweight but effective text embeddings using paraphrase-MiniLM-L6-v2
 - [Library or tool and why it was chosen]
+
+## Known Issues / Setup Notes
+### RAGAS + OpenAI v2 compatibility fix 
+RAGAS 0.4.x has a broken import from langchain_community.chat_models.vertexai. If RAGAS import fails with ModuleNotFoundError: No module named 'langchain_community.chat_models.vertexai' after installing, manually comment out two lines in .venv/lib/python3.12/site-packages/ragas/llms/base.py:
+Line 12: from langchain_community.chat_models.vertexai import ChatVertexAI
+Line 43: ChatVertexAI,
+
+### Use llm_factory not LangchainLLMWrapper — per RAGAS deprecation warning
 
 ## References
 - [Inspo](https://medium.com/@perfectsolution808/wikipedia-based-q-a-chatbot-a-beginners-approach-using-free-tools-5067d501a6ab)
@@ -44,3 +58,8 @@ Step-by-step instructions.
 - [Vector Embeddings Openai](https://developers.openai.com/api/docs/guides/embeddings)
 
 - [Chromadb create client & collection](https://docs.trychroma.com/docs/overview/getting-started)
+
+- [RAGAS Evaluation Dataset](https://docs.ragas.io/en/stable/concepts/components/eval_dataset/)
+- [RAGAS Customise models](https://docs.ragas.io/en/stable/howtos/customizations/customize_models/)
+- [RAGAS evaluate ()](https://docs.ragas.io/en/v0.2.8/references/evaluate/#ragas.evaluation.evaluate)
+- [RAGAS avaliable metrics](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/)

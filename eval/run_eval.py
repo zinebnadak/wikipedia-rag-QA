@@ -1,14 +1,11 @@
 # RAGAS harness
-from ragas import evaluate, EvaluationDataset, SingleTurnSample
-from ragas.metrics import Faithfulness, ResponseRelevancy, ContextPrecision, ContextRecall, FactualCorrectness # ragas.metrics.collections
 
-from openai import OpenAI
-from ragas.llms import llm_factory # RAGAS uses an LLM internally to compute faithfulness and answer relevance scores. Telling it which LLM to use.
-
-import json 
-from pipeline.rag import answer_question
-import time # because of groqs rate limits. Spreads token usage over time so it does not hit the per-minute limit + n_resutls in retrieve to 3 instead of 5
-from dotenv import load_dotenv
+'''
+Note: Running this script will take some time! Count with 10-15 minutes :)
+Each answer_question() call = scrape + embed + retrieve + Groq LLM call
+Then RAGAS makes its own LLM calls during evaluation...
+30 questions × 4 metrics × 1 LLM call each = ~120 OpenAI API calls + time.sleep(10) between each question adds 30 × 10 = 5 minutes of deliberate waiting before even starting eval. 
+'''
 
 '''
 #ingest your article and make sure it is in Chromadb
@@ -16,34 +13,40 @@ from pipeline.ingestion import ingest_article
 print(ingest_article("https://en.wikipedia.org/wiki/Madrid"))
 '''
 
+from dotenv import load_dotenv
+
+import json
+
+from ragas import evaluate, EvaluationDataset, SingleTurnSample
+from ragas.metrics import Faithfulness, ContextPrecision, ContextRecall, FactualCorrectness #,ResponseRelevancy             ragas.metrics.collections
+from openai import OpenAI
+from ragas.llms import llm_factory # RAGAS uses an LLM internally to compute faithfulness and answer relevance scores. Telling it which LLM to use.
+
 load_dotenv()
 
-with open ("eval/golden_set.json", "r") as file:
-    golden_set = json.load(file)
+pipeline_outputs_file = "golden_set_2_outputs.json"
+# Reading cached data for eval 
+with open(f"eval/{pipeline_outputs_file}", "r") as file:
+    pipeline_outputs = json.load(file)
 
 samples_list = []
 
-for entry in golden_set:
-    llm_answer = answer_question(entry["question"], entry["source_article"])
-    # anser_question() returns a dict with 3 chunks (n_results) - {"llm_answer": answer, "chunks": [f'{c["text"]}' for c in text_metadata_distances]}
+for entry in pipeline_outputs:
     samples_list.append(SingleTurnSample(
-        user_input = entry["question"],
-        retrieved_contexts = llm_answer["chunks"],
-        response = llm_answer["llm_answer"],
-        reference = entry["ground_truth"]
-        ))
-    
-    #print(llm_answer)
-    time.sleep(10)
+        user_input=entry["user_input"],
+        retrieved_contexts=entry["retrieved_contexts"],
+        response=entry["response"],
+        reference=entry["reference"]
+    ))
 
 # Evaluation
 dataset = EvaluationDataset(samples=samples_list) 
-evaluator_llm = llm_factory("gpt-4o-mini", client=OpenAI())
+evaluator_llm = llm_factory("gpt-4o", client=OpenAI(), max_tokens=2000)
 
 # All metrics must be initialised metric objects
 metrics = [
     Faithfulness(),
-    ResponseRelevancy(),
+    #ResponseRelevancy(),
     ContextPrecision(),
     ContextRecall(), 
     FactualCorrectness()

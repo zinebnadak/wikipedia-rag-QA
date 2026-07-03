@@ -11,7 +11,7 @@ def retrieve(question: str , article_title: str , n_results: int=5) -> list[dict
     embedded_query = embed([question])[0]   #the functon takes a list as argument not a single string. Fix wrap in a list and unwrap by index
     results = collection.query(
         query_embeddings = [embedded_query],
-        n_results = 5,
+        n_results = 3,
         where={"article_title": article_title}
     ) 
     return [

@@ -41,6 +41,7 @@ def ingest_article(url: str) -> dict:
 
 
 # results = collection.get(where={"article_title": "Madrid"})
-# print(len(results["ids"]))
+# print(len(results["ids"])) #total chunks with the article title
+# print(collection.count()) #total chunks in chromadb 
 
 
