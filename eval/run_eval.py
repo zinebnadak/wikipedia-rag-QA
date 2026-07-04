@@ -41,7 +41,8 @@ for entry in pipeline_outputs:
 
 # Evaluation
 dataset = EvaluationDataset(samples=samples_list) 
-evaluator_llm = llm_factory("gpt-4o", client=OpenAI(), max_tokens=2000)
+client = OpenAI(timeout=30.0)
+evaluator_llm = llm_factory("gpt-4o", client=client, max_tokens=2000)
 
 # All metrics must be initialised metric objects
 metrics = [
