@@ -24,7 +24,7 @@ from ragas.llms import llm_factory # RAGAS uses an LLM internally to compute fai
 
 load_dotenv()
 
-pipeline_outputs_file = "golden_set_2_outputs.json"
+pipeline_outputs_file = "golden_set_outputs_contextual_emb.json"
 # Reading cached data for eval 
 with open(f"eval/{pipeline_outputs_file}", "r") as file:
     pipeline_outputs = json.load(file)
@@ -42,7 +42,7 @@ for entry in pipeline_outputs:
 # Evaluation
 dataset = EvaluationDataset(samples=samples_list) 
 client = OpenAI(timeout=30.0)
-evaluator_llm = llm_factory("gpt-4o", client=client, max_tokens=2000)
+evaluator_llm = llm_factory("gpt-4o", client=client)
 
 # All metrics must be initialised metric objects
 metrics = [

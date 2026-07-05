@@ -13,7 +13,7 @@ import time # because of groqs rate limits. Spreads token usage over time so it 
 
 load_dotenv()
 
-golden_set_file = "golden_set_2"   # the golden set file inside eval/ folder without the ".json"
+golden_set_file = "golden_set"   # CHANGE THIS FOR EVAL - the targeted golden set baseline questions inside eval/ folder without the ".json"
 
 with open (f"eval/{golden_set_file}.json", "r") as file:
     golden_set = json.load(file)
@@ -32,7 +32,7 @@ for entry in golden_set:
     
     time.sleep(10)
 
-with open(f"eval/{golden_set_file}_outputs.json", "w") as results_file:
+with open(f"eval/{golden_set_file}_outputs_new_technique.json", "w") as results_file: # CHANGE THIS FOR EVAL, REPLACE FOR TECHNIQUE NAME
     json.dump(samples_list, results_file, indent=2)
 
 print(len(samples_list))
