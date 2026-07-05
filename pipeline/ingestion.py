@@ -61,14 +61,12 @@ print(collection.count()) #total chunks in chromadb
 def generate_chunk_context(article_data, chunk):    
 
     messages = [
-    {"role": "system", "content": f"""
-    You are a helpful assistant that writes concise context summaries for document chunks.
+        {"role": "system", "content": f""" You are a helpful assistant that writes concise context summaries for document chunks.
     Here is a Wikipedia article about {article_data["title"]}: {article_data["text"][:3000]}"""},
             
-    {"role": "user", "content": f"""
-    Here is a chunk from the '{chunk["section"]}' section: {chunk["text"]}
+        {"role": "user", "content": f""" Here is a chunk from the '{chunk["section"]}' section: {chunk["text"]}
     Write 2-3 sentences situating this chunk within the broader article. Be concise and focus on what makes this chunk unique and findable."""}
-    ]
+        ]
 
     response = generate_messages(messages) #default stream=False
     return response 
@@ -80,7 +78,21 @@ if __name__ == "__main__":
     chunk = chunk_article_data(article)[0]
     print(generate_chunk_context(article, chunk))
 
-Test n chunks × 1 Groq call each to generate context summaries, then n embeddings, will take some time
+Test what is actually in db:
+uv run python -c "
+import chromadb
+client = chromadb.PersistentClient(path='chroma_db')
+collection = client.get_or_create_collection('wiki-rag')
+print('Total chunks:', collection.count())
+results = collection.get(where={'article_title': 'Computer science'})
+print('Computer Science chunks:', len(results['ids']))
+"
+
+Begin eval by ingesting. chunks × 1 Groq call each to generate context summaries, then n embeddings, will take some time
 if __name__ == "__main__":
     print(ingest_article("https://en.wikipedia.org/wiki/Octopus"))
+
 '''
+
+if __name__ == "__main__":
+    print(ingest_article("https://en.wikipedia.org/wiki/Madrid"))
