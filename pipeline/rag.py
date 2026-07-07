@@ -1,6 +1,10 @@
 # Ties retrieve() and generate() together 
 
+# FOR RERANKING
 from pipeline.retrieval import retrieve
+from pipeline.reranking import rerank
+
+
 from pipeline.llm import generate_messages
 
 def answer_question(user_query: str , article_title: str) -> dict:
@@ -14,6 +18,9 @@ def answer_question(user_query: str , article_title: str) -> dict:
     Retrieved Context:{context}
     User Query:{user_query}
     """
+
+
+    #rerank between retrieve() and generate()
 
     messages = [{"role": "system", "content": system_prompt}]
     answer = generate_messages(messages)

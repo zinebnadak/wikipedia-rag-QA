@@ -63,3 +63,7 @@ Line 43: ChatVertexAI,
 - [RAGAS Customise models](https://docs.ragas.io/en/stable/howtos/customizations/customize_models/)
 - [RAGAS evaluate ()](https://docs.ragas.io/en/v0.2.8/references/evaluate/#ragas.evaluation.evaluate)
 - [RAGAS avaliable metrics](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/)
+
+
+- [Hybrid search: BM25Okapi algorithm](https://pypi.org/project/rank-bm25/)
+- [Reranking: Cross-Encoders](https://sbert.net/examples/cross_encoder/applications/README.html)

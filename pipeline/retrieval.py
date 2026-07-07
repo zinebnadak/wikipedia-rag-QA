@@ -8,7 +8,7 @@ import numpy as np
 chroma_client = chromadb.PersistentClient(path="chroma_db")   # persistent Client and collection 
 collection = chroma_client.get_or_create_collection(name="wiki-rag")  
 
-def retrieve(question: str , article_title: str , n_results: int=3) -> list[dict]:
+def retrieve(question: str , article_title: str , n_results: int=5) -> list[dict]: #3 -> 5 need more candidates for the reranker to choose from
     all_chunks = collection.get(where={"article_title": article_title})
     
     # BM25 sparse retrieval
