@@ -13,7 +13,8 @@ import time # because of groqs rate limits. Spreads token usage over time so it 
 
 load_dotenv()
 
-golden_set_file = "golden_set"   # CHANGE THIS FOR EVAL - the targeted golden set baseline questions inside eval/ folder without the ".json"
+golden_set_file = "golden_set_outputs_baseline"   # CHANGE THIS FOR EVAL to the targeted question set inside eval/ folder without the ".json"
+technique_name = "hybrid_search"                  # CHANGE THIS to which technique we're testing now
 
 with open (f"eval/{golden_set_file}.json", "r") as file:
     golden_set = json.load(file)
@@ -24,15 +25,15 @@ for entry in golden_set:
     llm_answer = answer_question(entry["question"], entry["source_article"]) # anser_question() returns a dict with 3 chunks (n_results) - {"llm_answer": answer, "chunks": [f'{c["text"]}' for c in text_metadata_distances]}
     samples_list.append({
         "user_input" : entry["question"],
-        "retrieved_contexts" : llm_answer["chunks"],
+        "retrieved_contexts" : llm_answer["chunks"], #??? # chunks truncated to 1500 chars for RAGAS compatibility, only for the evaluator's judgment not the answer,  risk if the answer references something only mentioned in the second half of a long chunk
         "response" : llm_answer["llm_answer"],
         "reference" : entry["ground_truth"],
         "source_article" : entry["source_article"] # but not valid in SingleTurnSample
         })
     
-    time.sleep(10)
+    time.sleep(1)
 
-with open(f"eval/{golden_set_file}_outputs_new_technique.json", "w") as results_file: # CHANGE THIS FOR EVAL, REPLACE FOR TECHNIQUE NAME
+with open(f"eval/{golden_set_file}_outputs_{technique_name}.json", "w") as results_file: 
     json.dump(samples_list, results_file, indent=2)
 
 print(len(samples_list))

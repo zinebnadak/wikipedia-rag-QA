@@ -21,6 +21,7 @@ a specific failure they would fix, or a client requires them.
 - Multi-hop reasoning — chain retrievals for complex questions
 - Caching layer — skip re-embedding unchanged chunks on re-ingest
 - Async context generation — batch Groq calls concurrently (production gap noted in commit)
+- async context generation during ingestion and async answer generation during eval. (The fix is asyncio.) Production gap noted in commit, Just not worth doing now since it's a learning project.
 
 ## Eval
 - Per-query Precision@k logging — via Langfuse
