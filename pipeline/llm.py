@@ -6,7 +6,7 @@ from typing import Iterator
 
 load_dotenv()
 
-def generate_messages(messages: list, stream=False, temperature=0) -> str | Iterator[str]: #need to explicitly set stream to True
+def generate_messages(messages: list, stream=False, temperature=0) -> str | Iterator[str]: #need to explicitly set stream to True.
     client = Groq(api_key=os.getenv("GROQ_API_KEY"))
     
     max_retries = 3
@@ -19,6 +19,8 @@ def generate_messages(messages: list, stream=False, temperature=0) -> str | Iter
                 stream=stream
             )
             break
+
+        # Retry logic to for Groq rate limits
         except RateLimitError:
             if attempt < max_retries - 1:
                 wait = 30 * (attempt + 1)
@@ -38,3 +40,5 @@ def generate_messages(messages: list, stream=False, temperature=0) -> str | Iter
             yield llm_content
 
     return stream_generator()
+
+

@@ -47,11 +47,11 @@ evaluator_llm = llm_factory("gpt-4o", client=client, max_tokens=4000)
 
 # All metrics must be initialised metric objects
 metrics = [
-    Faithfulness(),
+    #Faithfulness(),
     #ResponseRelevancy(),
-    #ContextPrecision(),
-    #ContextRecall(), 
-    FactualCorrectness()
+    ContextPrecision(),
+    ContextRecall(), 
+    #FactualCorrectness()
 ]
 
 evaluation_results = evaluate(
