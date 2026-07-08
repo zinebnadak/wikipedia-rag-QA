@@ -95,4 +95,4 @@ if __name__ == "__main__":
 '''
 
 if __name__ == "__main__":
-    print(ingest_article("https://en.wikipedia.org/wiki/Madrid"))
+    print(ingest_article("https://en.wikipedia.org/wiki/Madrid")) #takes about 3 minutes 

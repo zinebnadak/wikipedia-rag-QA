@@ -67,3 +67,4 @@ Line 43: ChatVertexAI,
 
 - [Hybrid search: BM25Okapi algorithm](https://pypi.org/project/rank-bm25/)
 - [Reranking: Cross-Encoders](https://sbert.net/examples/cross_encoder/applications/README.html)
+- [Reranking: Cross-encoder model from HF (compare to embedding model, bi-coder. Thi is a cross-encoder,reranker.)](https://huggingface.co/BAAI/bge-reranker-base)

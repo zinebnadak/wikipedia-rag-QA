@@ -14,7 +14,7 @@ import time # because of groqs rate limits. Spreads token usage over time so it 
 load_dotenv()
 
 golden_set_file = "golden_set_outputs_baseline"   # CHANGE THIS FOR EVAL to the targeted question set inside eval/ folder without the ".json"
-technique_name = "hybrid_search"                  # CHANGE THIS to which technique we're testing now
+technique_name = "reranking"                  # CHANGE THIS to the current technique 
 
 with open (f"eval/{golden_set_file}.json", "r") as file:
     golden_set = json.load(file)
@@ -31,7 +31,7 @@ for entry in golden_set:
         "source_article" : entry["source_article"] # but not valid in SingleTurnSample
         })
     
-    time.sleep(1)
+    time.sleep(10)
 
 with open(f"eval/{golden_set_file}_outputs_{technique_name}.json", "w") as results_file: 
     json.dump(samples_list, results_file, indent=2)

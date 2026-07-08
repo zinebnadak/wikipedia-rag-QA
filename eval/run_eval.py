@@ -24,7 +24,7 @@ from ragas.llms import llm_factory # RAGAS uses an LLM internally to compute fai
 
 load_dotenv()
 
-pipeline_outputs_file = "golden_set_outputs_baseline_outputs_hybrid_search.json"
+pipeline_outputs_file = "golden_set_outputs_baseline_outputs_reranking.json" #CHANGE TO CORRECT OUTPUTS FILE
 # Reading cached data for eval 
 with open(f"eval/{pipeline_outputs_file}", "r") as file:
     pipeline_outputs = json.load(file)
@@ -47,11 +47,11 @@ evaluator_llm = llm_factory("gpt-4o", client=client, max_tokens=4000)
 
 # All metrics must be initialised metric objects
 metrics = [
-    #Faithfulness(),
+    Faithfulness(),
     #ResponseRelevancy(),
-    ContextPrecision(),
-    ContextRecall(), 
-    #FactualCorrectness()
+    #ContextPrecision(),
+    #ContextRecall(), 
+    FactualCorrectness()
 ]
 
 evaluation_results = evaluate(
