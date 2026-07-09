@@ -1,6 +1,27 @@
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI(title="Wikipedia RAG")
+
+@app.get("http://localhost:8000/health")
+def health():
+    return {"status": "ok"}
+
+
+
+
+
+
+
+
+
+'''
+Groq test
+
 import os 
 from dotenv import load_dotenv
 from groq import Groq 
+from fastapi import FastAPI
 
 load_dotenv()
 
@@ -11,5 +32,10 @@ response = client.chat.completions.create(
     messages=[{"role": "user", "content": "Say hello in exactly 3 words."}],
 )
 
-print(response.choices[0].message.content)
+app = FastAPI()
+@app.get("/")
+def main()
+    return{"message"."Hello World!"}
 
+print(response.choices[0].message.content)
+'''
