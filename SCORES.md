@@ -10,7 +10,7 @@ Embeddings Model : text-embedding-3-small
 | Baseline (dense only) | 0.89 | 0.95 | 0.90 | 0.63 | gpt-4o
 | + Contextual embeddings | 0.79 | 0.92 | 0.91 | 0.73 | gpt-4o, Contextual embeddings made factual correctness better (+0.10) but hurt faithfulness (-0.10). Means that the LLM is now generating answers that are more factually accurate against ground truth, but occasionally draws on knowledge slightly beyond what the retrieved chunks strictly state. The context summaries are giving the LLM more "awareness" of the topic, which cuts both ways. Context precision dropped slightly (-0.03), means the contsextualized embeddings are pulling in slightly less precise chunks in some cases, possibly because the context summaries introduce vocabulary that matches questions about different sections.
 | + Hybrid search | 0.90 | 0.94 | 0.95 | 0.96  | gpt-4o
-| + Reranking | 0.94 | 0.89 | 0.94 | 0.76 |
+| + Reranking | 0.94 | 0.89 | 0.94 | 0.76 | gpt-4o
 
 ## Notes
 - AnswerRelevancy (*ResponseRelevancy) gives nan throughout, needs embeddings to compute.

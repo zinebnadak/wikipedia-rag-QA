@@ -1,13 +1,42 @@
-from fastapi import FastAPI
+from fastapi import FastAPI #with uvicorn as server
 from pydantic import BaseModel
+
+from pipeline.ingestion import ingest_article
+from pipeline.rag import answer_question
+
+class IngestRequest(BaseModel):
+    url: str
+
+class ChatRequest(BaseModel):
+    user_query: str
+    article_title: str
 
 app = FastAPI(title="Wikipedia RAG")
 
-@app.get("http://localhost:8000/health")
+@app.post("/ingest")    #web browsers do GET by default so test POST at http://localhost:8000/docs (FastAPI's built-in Swagger UI)
+def ingest(req: IngestRequest): #using validated pydantic class as typehint
+    return ingest_article(req.url)
+
+@app.post("/chat")
+def chat(req: ChatRequest):
+    return answer_question(req.user_query, req.article_title)
+
+
+
+'''¨
+Test 2: make a @app.post request at http://localhost:8000/docs 
+Try it out -> JSOn body with URL to ingest
+'''
+
+
+'''
+Test 1: FastAPI
 def health():
     return {"status": "ok"}
 
-
+uvicorn app.main:app --reload
+http://localhost:8000/health or whatever you defined in app.get()
+'''
 
 
 
