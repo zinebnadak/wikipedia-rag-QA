@@ -21,13 +21,15 @@ def ingest(req: IngestRequest): #using validated pydantic class as typehint
 def chat(req: ChatRequest):
     return answer_question(req.user_query, req.article_title)
 
-
+'''
+Test 3: ask a question and provide a article on /chat
+Try it out -> Json body
+'''
 
 '''¨
 Test 2: make a @app.post request at http://localhost:8000/docs 
 Try it out -> JSOn body with URL to ingest
 '''
-
 
 '''
 Test 1: FastAPI
@@ -37,12 +39,6 @@ def health():
 uvicorn app.main:app --reload
 http://localhost:8000/health or whatever you defined in app.get()
 '''
-
-
-
-
-
-
 
 '''
 Groq test
