@@ -1,3 +1,6 @@
+# FastAPI backend 
+# run with: uv run uvicorn app.main:app --reload
+
 from fastapi import FastAPI #with uvicorn as server
 from pydantic import BaseModel
 

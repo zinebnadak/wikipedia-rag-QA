@@ -12,9 +12,11 @@ def answer_question(user_query: str , article_title: str) -> dict:
     reranked_chunks = rerank(user_query, retrieved_chunks, top_n=3)
     context = "\n\n".join([c["text"] for c in reranked_chunks])
 
-    system_prompt = f"""You are a knowledgeable and helpful assistant. 
-    You must answer the user's question using only the provided retrieved information.
-    If the answer cannot be found within the retrieved text, output exactly: "I cannot answer this question based on the provided information." 
+    system_prompt = f"""
+    You are a knowledgeable and helpful assistant.
+    Answer the user's question using only the provided retrieved information.
+    Provide a complete and detailed answer — don't truncate information that's available in the context.
+    If the answer cannot be found, say: "I cannot answer this question based on the provided information.
     Do not provide any other information or guess.
     Retrieved Context:{context}
     User Query:{user_query}
