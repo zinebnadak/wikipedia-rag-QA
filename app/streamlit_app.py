@@ -1,5 +1,5 @@
 # Streamlit Frontend
-# run with: uv run streamlit run app/streamlit_app.py
+# also run app/main.py (backend) simultaniously
 
 import sys
 import os
@@ -37,7 +37,7 @@ if st.button("Ingest"): #runs only when the user clicks
     else: 
         with st.spinner("Ingesting article... this may take a minute"): #URL → extract title → scrape article → chunk → embed chunks → store in ChromaDB + Groq API calls (one context summary per chunk)
             ingest_response = requests.post(   #call with 'post' to use the endpoint
-                "http://localhost:8000/ingest",
+                "https://wikipedia-rag-qa.onrender.com/ingest", #Render URL
                 json={"url": url}
             ) # check return with st.write(ingest_response.status_code) and st.write(ingest_response.text)
 
@@ -59,7 +59,7 @@ if "article_title" in st.session_state:
     if question:
         st.session_state["messages"].append({"role": "user", "content": question})
         chat_response = requests.post(
-            "http://localhost:8000/chat",
+            "https://wikipedia-rag-qa.onrender.com/chat",   #Render URL
             json={
                 "user_query": question,
                 "article_title": st.session_state["article_title"]}
