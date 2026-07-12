@@ -3,6 +3,7 @@
 
 from fastapi import FastAPI #with uvicorn as server
 from pydantic import BaseModel
+import os
 
 from pipeline.ingestion import ingest_article
 from pipeline.rag import answer_question
@@ -23,6 +24,11 @@ def ingest(req: IngestRequest): #using validated pydantic class as typehint
 @app.post("/chat")
 def chat(req: ChatRequest):
     return answer_question(req.user_query, req.article_title)
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
+
 
 '''
 Test 3: ask a question and provide a article on /chat
