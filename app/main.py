@@ -32,6 +32,9 @@ if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
 
 '''
 Test 3: ask a question and provide a article on /chat
