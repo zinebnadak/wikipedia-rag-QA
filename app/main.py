@@ -1,9 +1,12 @@
 # FastAPI backend 
 # run with: uv run uvicorn app.main:app --reload
 
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from fastapi import FastAPI #with uvicorn as server
 from pydantic import BaseModel
-import os
 
 from pipeline.ingestion import ingest_article
 from pipeline.rag import answer_question
