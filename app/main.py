@@ -31,7 +31,7 @@ def ingest(req: IngestRequest): #using validated pydantic class as typehint
     except Exception as e:
         return {"status": "error", "message": str(e)}
 
-@app.post("/chat")
+@app.post("/chat") #traced with langfuse
 def chat(req: ChatRequest):
     return answer_question(req.user_query, req.article_title)
 

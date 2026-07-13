@@ -1,7 +1,7 @@
 # RAGAS Evaluation Scorecard
 
 Article: Madrid 
-Eval set: golden_set.json (30 questions)
+Eval set: golden_set_outputs_baseline.json (30 questions)
 Model: llama-3.1-8b-instant (Groq) 
 Embeddings Model : text-embedding-3-small
 
@@ -14,7 +14,7 @@ Embeddings Model : text-embedding-3-small
 
 ## Notes
 - AnswerRelevancy (*ResponseRelevancy) gives nan throughout, needs embeddings to compute.
-- golden_set_2.json baseline: faithfulness 0.96 | cp 0.95 | cr 0.96 | fc 0.77
+- golden_set_2_outputs_baseline.json´s baseline: faithfulness 0.96 | cp 0.95 | cr 0.96 | fc 0.77
 - Timeout errors on golden_set_2 run — switched evaluator to gpt-4o for subsequent runs
 
 **Known limitations:**

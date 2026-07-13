@@ -8,8 +8,17 @@ Second RAG build. Wikipedia as the data source, same overall pattern as my first
 ## What I built
 An AI-powered tool that lets you explore and study Wikipedia articles through a retrieval-based chat. 
 
+#### Backend
+requirements-deploy.txt
 [Backend on Render:](https://wikipedia-rag-qa.onrender.com/docs)
-<img src="img/render_deployment.png" width="200">
+
+<img src="img/render_deployment.png" width="400">
+
+#### Frontend 
+requirements.txt
+[Frontend on Streamlit Cloud:](https://wikipedia-rag-app.streamlit.app/)
+
+<img src="img/streamlit_frontend.png" width="400">
 
 ## Features
 - provide a valid wikipedia URL 
@@ -77,3 +86,5 @@ Ingestion uses Groq's free tier for context summary generation. For large articl
 
 - [FastAPI docs](https://fastapi-tutorial.readthedocs.io/en/latest/)
 - [streamlit docs](https://docs.streamlit.io/get-started/fundamentals/main-concepts)
+
+- [Langfuse, create a trace manually](https://github.com/orgs/langfuse/discussions/7558)
