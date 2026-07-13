@@ -10,7 +10,7 @@ from pipeline.llm import generate_messages
 def answer_question(user_query: str , article_title: str) -> dict:
     retrieved_chunks = retrieve(user_query, article_title, n_results=5)
     # reranked_chunks = rerank(user_query, retrieved_chunks, top_n=3) #reranking disabeled
-    context = "\n\n".join([c["text"] for c in reranked_chunks])
+    context = "\n\n".join([c["text"] for c in retrieved_chunks])
 
     system_prompt = f"""
     You are a knowledgeable and helpful assistant.
