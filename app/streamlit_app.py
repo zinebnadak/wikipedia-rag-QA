@@ -1,44 +1,19 @@
 # Streamlit Frontend
 # also run app/main.py (backend) simultaniously
 
-import sys
-import os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) # tells python to also look at the project root not just /app folder. run with: uv run streamlit run app/streamlit_app.py
-
 import streamlit as st
 import requests 
-import chromadb
-from scraper.wikipedia import extract_title_from_url
-import time
-
-#check if article already ingested
-chroma_client = chromadb.PersistentClient(path="chroma_db")
-collection = chroma_client.get_or_create_collection("wiki-rag")
-
-def is_ingested(article_title: str) -> bool:
-    results = collection.get(where={"article_title": article_title})
-    return len(results["ids"]) > 0 # If the article is ingested, this list of chunk IDs has items and is True
-
 
 st.title("Chat with Wikipedia")
-# st.subheader("Enter a any valid Wikipdia URL and have a chat!")
-
 
 # Ingest
 url = st.text_input("Enter a valid Wikipdia URL and have a chat!") #requests sends url to FastAPI endpoint
 
-if st.button("Ingest"): #runs only when the user clicks
-    title, lang = extract_title_from_url(url)
-    if is_ingested(title):
-        with st.spinner(f"Loading '{title}' from knowledge base and opening chat..."):
-            time.sleep(2)
-        st.session_state["article_title"] = title
-        st.success(f"Article '{title}' loaded!")    
-    else: 
-        with st.spinner("Ingesting article... this may take a minute"): #URL → extract title → scrape article → chunk → embed chunks → store in ChromaDB + Groq API calls (one context summary per chunk)
-            ingest_response = requests.post(   #call with 'post' to use the endpoint
-                "https://wikipedia-rag-qa.onrender.com/ingest", #Render URL
-                json={"url": url}
+if st.button("Ingest"): #runs only when the user clicks  
+    with st.spinner("Ingesting article... this may take a minute"): #URL → extract title → scrape article → chunk → embed chunks → store in ChromaDB + Groq API calls (one context summary per chunk)
+        ingest_response = requests.post(   #call with 'post' to use the endpoint
+            "https://wikipedia-rag-qa.onrender.com/ingest", #Render URL
+            json={"url": url}
             ) # check return with st.write(ingest_response.status_code) and st.write(ingest_response.text)
 
         ingest_result = ingest_response.json() #the response comes back as a raw Response object. Now its a python dict.

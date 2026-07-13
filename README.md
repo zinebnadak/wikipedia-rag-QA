@@ -8,6 +8,9 @@ Second RAG build. Wikipedia as the data source, same overall pattern as my first
 ## What I built
 An AI-powered tool that lets you explore and study Wikipedia articles through a retrieval-based chat. 
 
+[Backend on Render:](https://wikipedia-rag-qa.onrender.com/docs)
+<img src="img/render_deployment.png" width="200">
+
 ## Features
 - provide a valid wikipedia URL 
 - ask questions about the content using natural language
@@ -32,13 +35,16 @@ uv run -m pipeline.ingestion
 - Lightweight but effective text embeddings using paraphrase-MiniLM-L6-v2
 - [Library or tool and why it was chosen]
 
-## Known Issues / Setup Notes
+## Known Issues / limitaions / Setup Notes
 ### RAGAS + OpenAI v2 compatibility fix 
 RAGAS 0.4.x has a broken import from langchain_community.chat_models.vertexai. If RAGAS import fails with ModuleNotFoundError: No module named 'langchain_community.chat_models.vertexai' after installing, manually comment out two lines in .venv/lib/python3.12/site-packages/ragas/llms/base.py:
 Line 12: from langchain_community.chat_models.vertexai import ChatVertexAI
 Line 43: ChatVertexAI,
 
 ### Use llm_factory not LangchainLLMWrapper — per RAGAS deprecation warning
+
+### Groq´s free tier
+Ingestion uses Groq's free tier for context summary generation. For large articles, ingestion may take 2-3 minutes due to rate limiting. A production deployment would use a paid tier or async batching.
 
 ## References
 - [Inspo](https://medium.com/@perfectsolution808/wikipedia-based-q-a-chatbot-a-beginners-approach-using-free-tools-5067d501a6ab)
