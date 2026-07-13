@@ -24,9 +24,12 @@ app = FastAPI(title="Wikipedia RAG")
 def health():
     return {"status": "ok"}
 
-@app.post("/ingest")    #web browsers do GET by default so test POST at http://localhost:8000/docs (FastAPI's built-in Swagger UI)
+@app.post("/ingest") #web browsers do GET by default so test POST at http://localhost:8000/docs (FastAPI's built-in Swagger UI)
 def ingest(req: IngestRequest): #using validated pydantic class as typehint
-    return ingest_article(req.url)
+    try:
+        return ingest_article(req.url)
+    except Exception as e:
+        return {"status": "error", "message": str(e)}
 
 @app.post("/chat")
 def chat(req: ChatRequest):
