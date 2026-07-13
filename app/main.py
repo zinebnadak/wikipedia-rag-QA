@@ -20,6 +20,10 @@ class ChatRequest(BaseModel):
 
 app = FastAPI(title="Wikipedia RAG")
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
 @app.post("/ingest")    #web browsers do GET by default so test POST at http://localhost:8000/docs (FastAPI's built-in Swagger UI)
 def ingest(req: IngestRequest): #using validated pydantic class as typehint
     return ingest_article(req.url)
@@ -32,9 +36,7 @@ if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
 
-@app.get("/health")
-def health():
-    return {"status": "ok"}
+
 
 '''
 Test 3: ask a question and provide a article on /chat

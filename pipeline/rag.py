@@ -2,7 +2,7 @@
 
 # FOR RERANKING retrieve(5 candidates) → rerank(top 3) → build context → generate → return
 from pipeline.retrieval import retrieve
-from pipeline.reranking import rerank
+#from pipeline.reranking import rerank
 
 
 from pipeline.llm import generate_messages
