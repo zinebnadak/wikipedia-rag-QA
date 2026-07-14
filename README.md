@@ -43,6 +43,7 @@ Groq LLM generation (context-only system prompt) → answer
 
 ## Observability
 Every `/chat` request is traced in Langfuse using the `@observe()` decorator on `answer_question()`. Each trace logs the question, retrieved chunks count, generated answer, and latency.
+
 <img src="img/langfuse.png" width="400">
 
 
@@ -59,6 +60,7 @@ Every `/chat` request is traced in Langfuse using the `@observe()` decorator on 
 
 ## Eval Results (RAGAS)
 See [`SCORES.md`](SCORES.md) for full documentation and notes.
+
 <img src="img/eval-result.png" width="400">
 <img src="img/evaluating.png" width="400">
 
