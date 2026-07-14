@@ -1,6 +1,6 @@
 # Episode 005 - Wikipedia RAG Q&A
 
-> [One sentence single takeaway from this project.]
+> Takweaway: Eval-first RAG means measure before you optimize. For production use cases where answer accuracy matters most, hybrid search would beat reranking for factual correctness
 
 ## The Problem / The Question
 Second RAG build but this time with Wikipedia as the data source, same overall pattern as my first demo project (ha.ax) but rebuilt with evaluation, better chunking, hybrid search, and reranking. 
@@ -10,14 +10,14 @@ I chose Wikipedia text because it is noisier than a university website. Inconsis
 ## What I built
 An AI-powered tool that lets you explore and study Wikipedia articles through a retrieval-based chat. You paste in a valid wikipedia URL, and the tool opens a chat for it. 
 
-#### Backend
-Requirements in requirements-deploy.txt
+#### Backend - Requirements in requirements-deploy.txt
+
 [Render API URL](https://wikipedia-rag-qa.onrender.com/docs)
 
 <img src="img/render_deployment.png" width="400">
 
-#### Frontend 
-Requirements in requirements.txt
+#### Frontend - Requirements in requirements.txt
+
 [Streamlit Cloud URL](https://wikipedia-rag-app.streamlit.app/)
 
 <img src="img/streamlit_frontend.png" width="400">
@@ -41,6 +41,11 @@ Groq LLM generation (context-only system prompt) → answer
 - Retrieve relevant information using hybrid search (dense embeddings + BM25).
 - Generate answers grounded in the retrieved Wikipedia context.
 
+## Observability
+Every `/chat` request is traced in Langfuse using the `@observe()` decorator on `answer_question()`. Each trace logs the question, retrieved chunks count, generated answer, and latency.
+<img src="img/langfuse.png" width="400">
+
+
 ## What I Learned
 - Heading-aware chunking using a regex-based parser.
 - Retrieval evaluation using RAGAS to compare dense retrieval, contextual embeddings, hybrid search, and reranking strategies.
@@ -51,6 +56,12 @@ Groq LLM generation (context-only system prompt) → answer
 - LLM-as-a-Judge evaluation with GPT-4o through RAGAS using metrics such as Context Precision, Context Recall, Faithfulness, and Factual Correctness.
 - Langfuse observability with @observe, logging each question, retrieved context, and generated answer.
 - AI libraries evolve rapidly, making dependency and compatibility issues common; keeping packages aligned and regularly testing integrations is essential.
+
+## Eval Results (RAGAS)
+See [`SCORES.md`](SCORES.md) for full documentation and notes.
+<img src="img/eval-result.png" width="400">
+<img src="img/evaluating.png" width="400">
+
 
 ## How to Run
 
