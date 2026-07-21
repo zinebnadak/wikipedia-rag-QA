@@ -1,6 +1,6 @@
 # Episode 005 - Wikipedia RAG Q&A
 
-> Takweaway: Eval-first RAG means measure before you optimize. For production use cases where answer accuracy matters most, hybrid search would beat reranking for factual correctness
+> Takeaway: Eval-first RAG means measure before you optimize. For production use cases where answer accuracy matters most, hybrid search would beat reranking for factual correctness
 
 ## The Problem / The Question
 Second RAG build but this time with Wikipedia as the data source, same overall pattern as my first demo project (ha.ax) but rebuilt with evaluation, better chunking, hybrid search, and reranking. 
